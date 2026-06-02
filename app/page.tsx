@@ -1,13 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight, Heart, Search, ShoppingCart, UserCircle } from "lucide-react";
 
 const colors = [
-  { src: "/products/coral-jacket-v2.png", label: "Moss" },
-  { src: "/products/olive-jacket-v2.png", label: "Sand" },
-  { src: "/products/tan-jacket-v2.png", label: "Rust" },
-  { src: "/products/hero-jacket-v2.png", label: "Mustard" },
+  { src: "/products/moss-jacket-v2.png", label: "Moss" },
+  { src: "/products/sand-jacket-v2.png", label: "Sand" },
+  { src: "/products/rust-jacket-v2.png", label: "Rust" },
+  { src: "/products/coral-jacket-v2.png", label: "Mustard" },
 ];
 
 const products = [
@@ -29,6 +30,8 @@ const products = [
 ];
 
 export default function Home() {
+  const [activeColor, setActiveColor] = useState(colors[3]);
+
   return (
     <main className="storefront">
       <header className="nav">
@@ -66,8 +69,8 @@ export default function Home() {
           <p className="megaText">FASHION<br />FORWED</p>
           <Image
             className="heroJacket"
-            src="/products/coral-jacket-v2.png"
-            alt="Mustard yellow quilted puffer jacket with gray hoodie"
+            src={activeColor.src}
+            alt={`${activeColor.label} quilted puffer jacket with gray hoodie`}
             width={1600}
             height={1600}
             priority
@@ -89,7 +92,12 @@ export default function Home() {
           <h2 className="colourTitle">COLOUR</h2>
           <div className="swatches">
             {colors.map((color) => (
-              <button className="swatch" aria-label={color.label} key={color.label}>
+              <button 
+                className={`swatch ${activeColor.label === color.label ? "active" : ""}`} 
+                aria-label={color.label} 
+                key={color.label}
+                onClick={() => setActiveColor(color)}
+              >
                 <Image src={color.src} alt="" width={94} height={74} />
               </button>
             ))}

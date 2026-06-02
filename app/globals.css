@@ -344,22 +344,31 @@ button {
 
   .purchasePanel {
     grid-column: 1 / -1;
-    padding-top: 0;
-    display: grid;
-    grid-template-columns: auto auto 1fr auto auto;
-    align-items: center;
-    gap: 14px 24px;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px 32px;
   }
 
-  .purchasePanel .colourTitle,
-  .swatches,
-  .cartButton,
-  .favoriteButton {
-    margin: 0 !important;
+  .purchasePanel h2 {
+    margin-bottom: 10px;
+  }
+
+  .purchasePanel .colourTitle {
+    margin-top: 0 !important;
   }
 
   .swatches {
+    margin-bottom: 0;
     grid-template-columns: repeat(4, 58px);
+  }
+
+  .cartButton,
+  .favoriteButton {
+    flex: 1;
+    min-width: 200px;
+    margin-top: 0;
   }
 }
 
@@ -406,21 +415,37 @@ button {
   }
 
   .purchasePanel {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     padding: 20px 0 0;
+    gap: 16px;
   }
 
-  .sizes,
-  .swatches {
-    margin-bottom: 16px;
+  .sizes {
+    margin-bottom: 0;
+  }
+  
+  .purchasePanel h2 {
+    margin-bottom: 8px;
+  }
+
+  .purchasePanel .colourTitle {
+    margin-top: 16px !important;
   }
 
   .swatches {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
   }
 
-  .colourTitle {
-    margin-top: 28px !important;
+  .cartButton,
+  .favoriteButton {
+    min-width: 0;
+  }
+
+  .favoriteButton {
+    margin-top: -6px;
   }
 
   .productGrid {
