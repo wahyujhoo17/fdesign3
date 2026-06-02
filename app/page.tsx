@@ -66,9 +66,10 @@ export default function Home() {
             className="heroJacket"
             src="/products/hero-jacket-v2.png"
             alt="Mustard yellow quilted puffer jacket with gray hoodie"
-            width={760}
-            height={760}
+            width={1600}
+            height={1600}
             priority
+            unoptimized
           />
         </div>
 
