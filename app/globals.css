@@ -428,3 +428,274 @@ button {
     margin-top: 38px;
   }
 }
+
+/* Editorial Section */
+.editorialSection {
+  margin-top: clamp(80px, 12vw, 150px);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+
+.editorialText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editorialText h2 {
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 0.95;
+  margin: 0 0 24px;
+  font-weight: 900;
+}
+
+.editorialDesc {
+  font-size: 15px;
+  line-height: 1.35;
+  color: oklch(42% 0.012 260);
+  max-width: 52ch;
+  margin-bottom: 48px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 36px;
+}
+
+.featureItem h4 {
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.featureItem p {
+  font-size: 12px;
+  line-height: 1.35;
+  color: oklch(48% 0.012 260);
+  margin: 0;
+}
+
+.editorialVisual {
+  display: grid;
+  place-items: center;
+}
+
+.editorialImageWrap {
+  width: 100%;
+  aspect-ratio: 0.84;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.editorialImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Newsletter Section */
+.newsletter {
+  margin-top: clamp(80px, 12vw, 150px);
+  padding: 80px 40px;
+  border-radius: var(--radius-card);
+  background: var(--paper-warm);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.015);
+}
+
+.newsletterContent {
+  max-width: 520px;
+}
+
+.newsletterContent h2 {
+  font-size: clamp(28px, 3.5vw, 48px);
+  line-height: 1;
+  font-weight: 900;
+  margin: 0 0 16px;
+}
+
+.newsletterContent p {
+  font-size: 14px;
+  line-height: 1.35;
+  color: oklch(42% 0.012 260);
+  margin: 0 0 34px;
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.subscribeForm input {
+  flex: 1;
+  height: 52px;
+  padding: 0 24px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: oklch(98% 0.01 75 / 0.48);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.subscribeForm input::placeholder {
+  color: oklch(55% 0.01 260);
+}
+
+.subscribeForm input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.subscribeForm button {
+  height: 52px;
+  padding: 0 32px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s;
+}
+
+.subscribeForm button:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  margin-top: clamp(80px, 12vw, 150px);
+  border-top: 1px solid var(--line);
+  padding-top: 68px;
+}
+
+.footerColumns {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footerBrandCol .brand {
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.brandMotto {
+  font-size: 13px;
+  line-height: 1.35;
+  color: oklch(42% 0.012 260);
+  max-width: 28ch;
+  margin: 0;
+}
+
+.footerCol h4 {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0 0 24px;
+  color: var(--ink);
+}
+
+.footerCol a {
+  display: block;
+  font-size: 12px;
+  text-decoration: none;
+  color: oklch(42% 0.012 260);
+  margin-bottom: 12px;
+}
+
+.footerCol a:hover {
+  color: var(--ink);
+}
+
+.footerBottom {
+  margin-top: 68px;
+  border-top: 1px solid oklch(88% 0.02 73);
+  padding: 28px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: oklch(55% 0.01 260);
+}
+
+.footerBottom p {
+  margin: 0;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 24px;
+}
+
+.footerSocials a {
+  text-decoration: none;
+}
+
+.footerSocials a:hover {
+  color: var(--ink);
+}
+
+/* Responsive adjustments for editorial section */
+@media (max-width: 1050px) {
+  .editorialSection {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .editorialVisual {
+    order: -1;
+  }
+
+  .editorialImageWrap {
+    max-width: 480px;
+  }
+
+  .footerColumns {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .subscribeForm {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .subscribeForm button {
+    width: 100%;
+  }
+
+  .footerColumns {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
