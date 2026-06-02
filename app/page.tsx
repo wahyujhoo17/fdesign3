@@ -64,7 +64,7 @@ export default function Home() {
           <p className="megaText">FASHION<br />FORWED</p>
           <Image
             className="heroJacket"
-            src="/products/hero-jacket-v2.png"
+            src="/products/coral-jacket-v2.png"
             alt="Mustard yellow quilted puffer jacket with gray hoodie"
             width={1600}
             height={1600}
