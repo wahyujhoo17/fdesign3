@@ -18,7 +18,7 @@ const products = [
   },
   {
     title: "3X BEIGEWASHED",
-    src: "/products/coral-jacket-v2.png",
+    src: "/products/hero-jacket-v2.png",
     text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. ut et odio id turpis blandit dignissim. in non arcu ullamcorper, bibendum ex non, dapibus dui. sed in ipsum ac leo",
   },
   {
